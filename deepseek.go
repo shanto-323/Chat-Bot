@@ -17,13 +17,13 @@ func Deepseek(query string) (*ChatCompletionResponse, error) {
 	}
 
 	payload := Payload{
-		Model: "openai/gpt-3.5-turbo",
+		Model: "qwen/qwen-2-7b-instruct:free",
 		Messages: []Messages{
 			{
 				Role:    "user",
 				Content: query,
 			},
-		}
+		},
 	}
 	jsonPayload, err := json.Marshal(payload)
 	if err != nil {
