@@ -28,7 +28,6 @@ func Run() {
 		}
 		content := strings.Split(m.Content, " ")
 		if content[0] != call {
-			fmt.Println("Wrong callout")
 			return
 		}
 
@@ -36,7 +35,13 @@ func Run() {
 		for i := 1; i < len(content); i++ {
 			query = query + content[i] + " " // Getting whole query
 		}
-		s.ChannelMessageSend(m.ChannelID, query)
+		deepseek, err := Deepseek(query)
+		if err != nil {
+			s.ChannelMessageSend(m.ChannelID, "invalid request")
+			fmt.Println(err)
+			return
+		}
+		s.ChannelMessageSend(m.ChannelID, deepseek.Choices[0].Message.Content)
 	})
 
 	session.Identify.Intents = disGo.IntentsAllWithoutPrivileged
