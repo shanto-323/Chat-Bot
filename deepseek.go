@@ -23,7 +23,7 @@ func Deepseek(query string) (*ChatCompletionResponse, error) {
 				Role:    "user",
 				Content: query,
 			},
-		},
+		}
 	}
 	jsonPayload, err := json.Marshal(payload)
 	if err != nil {
