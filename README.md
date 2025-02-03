@@ -9,7 +9,6 @@ Chip-Chap is a Discord bot written in Go that aims to enhance server interaction
 
 $chi hello!
 
-
 ## Reference
 
 You can modify or make your own api.
@@ -21,6 +20,6 @@ https://openrouter.ai
 
 Go to this url and then choose any free or paid model you want (i am using Qwen 2 7B Instruct).
 
-<img width="1440" alt="Screenshot 2025-02-03 at 10 08 52 PM" src="https://github.com/user-attachments/assets/846fe853-2b2a-4edd-a04c-2b58aa8b5ed7" />
+<img width="1440" alt="Screenshot 2025-02-03 at 10 13 21 PM" src="https://github.com/user-attachments/assets/4325f742-b0ac-4c25-99fb-b488924f895b" />
 
 Then get an Api-Key and make whatever you want. ><
